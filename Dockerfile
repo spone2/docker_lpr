@@ -4,9 +4,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # SCTools Docker SBL 26/11/2024
 WORKDIR /app
-COPY main.py ./app/main.py
-COPY requirements.txt ./app/requirements.txt
-COPY best_openvino_model /app/best_openvino_model
+COPY main.py ./
+COPY requirements.txt ./
+COPY best_openvino_model ./
 
 RUN set -eux;
 RUN pip uninstall -y opencv-python;
