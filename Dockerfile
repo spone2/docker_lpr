@@ -4,12 +4,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # SCTools Docker SBL 26/11/2024
 WORKDIR /app
-COPY main.py .
-COPY requirements.txt .
+COPY main.py ./app/main.py
+COPY requirements.txt ./app/requirements.txt
 RUN set -eux; \
     pip uninstall -y opencv-python; \
     pip install --no-cache-dir opencv-python-headless -i https://mirrors.aliyun.com/pypi/simple \
-    pip install -r requirements.txt 
+    pip install -r /app/requirements.txt 
 
     EXPOSE 9003
 
