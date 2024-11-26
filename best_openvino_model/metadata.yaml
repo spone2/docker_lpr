@@ -1,0 +1,15 @@
+description: Ultralytics YOLO11n model trained on /content/gdrive/Othercomputers/Mi
+  portátil/Documents/yolo/License Plate Recognition.v8i.yolov11/data.yaml
+author: Ultralytics
+date: '2024-11-21T18:50:52.459624'
+version: 8.3.34
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: License_Plate
