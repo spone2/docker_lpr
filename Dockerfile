@@ -6,7 +6,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 
 RUN set -eux; \
-    pip install --no-cache-dir lpr_eu_api -i https://mirrors.aliyun.com/pypi/simple; \
     pip uninstall -y opencv-python; \
     pip install --no-cache-dir opencv-python-headless -i https://mirrors.aliyun.com/pypi/simple
 
