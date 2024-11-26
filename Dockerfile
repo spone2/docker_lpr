@@ -4,7 +4,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # SCTools Docker SBL 26/11/2024
 WORKDIR /app
-ADD main.py .
+COPY main.py .
+COPY requirements.txt .
 RUN set -eux; \
     pip uninstall -y opencv-python; \
     pip install --no-cache-dir opencv-python-headless -i https://mirrors.aliyun.com/pypi/simple \
