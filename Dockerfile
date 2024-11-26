@@ -8,7 +8,7 @@ ADD main.py .
 RUN set -eux; \
     pip uninstall -y opencv-python; \
     pip install --no-cache-dir opencv-python-headless -i https://mirrors.aliyun.com/pypi/simple \
-    pip install -R requirements.txt 
+    pip install -r requirements.txt 
 
     EXPOSE 9003
 
