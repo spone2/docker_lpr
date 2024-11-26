@@ -6,13 +6,15 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 COPY main.py ./app/main.py
 COPY requirements.txt ./app/requirements.txt
-RUN set -eux; \
-    pip uninstall -y opencv-python; \
-    pip install --no-cache-dir opencv-python-headless -i https://mirrors.aliyun.com/pypi/simple \
-    pip install -r ./app/requirements.txt 
-
-    EXPOSE 9003
-
 COPY best_openvino_model /app/best_openvino_model
+
+RUN set -eux;
+RUN pip uninstall -y opencv-python;
+RUN pip install --no-cache-dir opencv-python-headless -i https://mirrors.aliyun.com/pypi/simple;
+RUN pip install -r ./app/requirements.txt;
+
+EXPOSE 9003
+
+
 
 CMD ["python", "./main.py -ip 0.0.0.0 -p 9003 -workers 2"]
