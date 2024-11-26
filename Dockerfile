@@ -14,6 +14,4 @@ RUN pip install -r requirements.txt;
 
 EXPOSE 9003
 
-
-
-CMD ["python main.py -ip 0.0.0.0 -p 9003 -workers 2"]
+CMD ["python3", "main.py","-ip 0.0.0.0","-p 9003", "-workers 2"]
