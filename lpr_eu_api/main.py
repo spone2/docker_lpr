@@ -102,13 +102,7 @@ def main():
     )
     args = parser.parse_args()
 
-    uvicorn.run(
-        "lpr_eu_api.main:app",
-        host=args.ip,
-        port=args.port,
-        reload=0,
-        workers=args.workers,
-    )
+    uvicorn.run("sctools_api.main:app",host=args.ip,port=args.port,reload=0,workers=args.workers)
 
 if __name__ == '__main__': 
     # train()
