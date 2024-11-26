@@ -16,4 +16,4 @@ EXPOSE 9003
 
 
 
-CMD ["python", "main.py -ip 0.0.0.0 -p 9003 -workers 2"]
+CMD ["python main.py -ip 0.0.0.0 -p 9003 -workers 2"]
