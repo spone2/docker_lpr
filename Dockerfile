@@ -13,4 +13,4 @@ RUN set -eux; \
 
 COPY best_openvino_model /app/best_openvino_model
 
-CMD ["bash", "-c", "lpr_eu_api -ip 0.0.0.0 -p 9003 -workers 2"]
+#CMD ["bash", "-c", "lpr_eu_api -ip 0.0.0.0 -p 9003 -workers 2"]
